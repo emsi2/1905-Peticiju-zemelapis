@@ -1559,19 +1559,21 @@ loadAdministrativeLayers();
 async function loadDefaultData() {
     try {
         const response = await fetch('peticijos_1905.csv');
-        if (!response.ok) return;
+        if (!response.ok) {
+            console.log('CSV file not found');
+            return;
+        }
 
         const csvText = await response.text();
         const rows = csvText.trim().split('\n');
 
         if (rows.length < 2) return;
 
-        // Parse header
-        const headers = rows[0].split(',').map(h => h.trim().toLowerCase());
-        const cityIdx = headers.findIndex(h => h.includes('vals') || h.includes('city'));
-        const gubernijaIdx = headers.findIndex(h => h.includes('gubern'));
-        const dateIdx = headers.findIndex(h => h.includes('data') || h.includes('date'));
-        const nameTagIdx = headers.findIndex(h => h.includes('name') || h.includes('tag'));
+        // Column indices (fixed based on CSV structure: valsčius,name tag,gubernija,data)
+        const cityIdx = 0;
+        const nameTagIdx = 1;
+        const gubernijaIdx = 2;
+        const dateIdx = 3;
 
         // Show loading
         const loadingDiv = document.createElement('div');
@@ -1581,20 +1583,20 @@ async function loadDefaultData() {
 
         let imported = 0;
         let failed = 0;
+        const totalRows = rows.length - 1;
 
         for (let i = 1; i < rows.length; i++) {
-            // Parse CSV row (handle quoted values)
-            const row = rows[i].match(/(".*?"|[^,]+)(?=\s*,|\s*$)/g);
-            if (!row || !row[cityIdx]) continue;
+            const row = rows[i].split(',');
+            if (!row || row.length < 4) continue;
 
-            const city = row[cityIdx]?.replace(/"/g, '').trim();
-            const gubernija = gubernijaIdx !== -1 && row[gubernijaIdx] ? row[gubernijaIdx].replace(/"/g, '').trim() : null;
-            const date = dateIdx !== -1 && row[dateIdx] ? row[dateIdx].replace(/"/g, '').trim() : '';
-            const nameTag = nameTagIdx !== -1 && row[nameTagIdx] ? row[nameTagIdx].replace(/"/g, '').trim() : null;
+            const city = row[cityIdx]?.trim();
+            const nameTag = row[nameTagIdx]?.trim() || null;
+            const gubernija = row[gubernijaIdx]?.trim() || null;
+            const date = row[dateIdx]?.trim() || '';
 
             if (!city) continue;
 
-            loadingDiv.innerHTML = `Loading: ${city} (${i}/${rows.length - 1})`;
+            loadingDiv.innerHTML = `Loading: ${city} (${i}/${totalRows})`;
 
             const coords = await geocodeCity(city);
 
@@ -1606,8 +1608,8 @@ async function loadDefaultData() {
                 failed++;
             }
 
-            // Rate limit
-            await new Promise(resolve => setTimeout(resolve, 300));
+            // Rate limit for Nominatim API
+            await new Promise(resolve => setTimeout(resolve, 350));
         }
 
         loadingDiv.remove();
@@ -1616,7 +1618,7 @@ async function loadDefaultData() {
         console.log(`Auto-loaded ${imported} points, ${failed} failed`);
 
     } catch (error) {
-        console.log('No default CSV to load or error:', error.message);
+        console.error('Error loading default CSV:', error);
     }
 }
 
