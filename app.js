@@ -1555,72 +1555,28 @@ document.addEventListener('keydown', (e) => {
 // Load administrative boundaries on page load
 loadAdministrativeLayers();
 
-// Auto-load default CSV data
+// Auto-load pre-geocoded data from JSON (instant load, no geocoding needed)
 async function loadDefaultData() {
     try {
-        const response = await fetch('peticijos_1905.csv');
+        const response = await fetch('data-points.json');
         if (!response.ok) {
-            console.log('CSV file not found');
+            console.log('Pre-geocoded data not found');
             return;
         }
 
-        const csvText = await response.text();
-        const rows = csvText.trim().split('\n');
+        const points = await response.json();
 
-        if (rows.length < 2) return;
+        points.forEach(point => {
+            addDataPoint(point.lat, point.lon, point.city, point.date, point.gubernija, point.nameTag);
+        });
 
-        // Column indices (fixed based on CSV structure: valsčius,name tag,gubernija,data)
-        const cityIdx = 0;
-        const nameTagIdx = 1;
-        const gubernijaIdx = 2;
-        const dateIdx = 3;
-
-        // Show loading
-        const loadingDiv = document.createElement('div');
-        loadingDiv.className = 'loading-overlay';
-        loadingDiv.innerHTML = 'Loading data points...';
-        document.body.appendChild(loadingDiv);
-
-        let imported = 0;
-        let failed = 0;
-        const totalRows = rows.length - 1;
-
-        for (let i = 1; i < rows.length; i++) {
-            const row = rows[i].split(',');
-            if (!row || row.length < 4) continue;
-
-            const city = row[cityIdx]?.trim();
-            const nameTag = row[nameTagIdx]?.trim() || null;
-            const gubernija = row[gubernijaIdx]?.trim() || null;
-            const date = row[dateIdx]?.trim() || '';
-
-            if (!city) continue;
-
-            loadingDiv.innerHTML = `Loading: ${city} (${i}/${totalRows})`;
-
-            const coords = await geocodeCity(city);
-
-            if (coords) {
-                addDataPoint(coords.lat, coords.lon, city, date, gubernija, nameTag);
-                imported++;
-            } else {
-                console.warn(`Could not geocode: ${city}`);
-                failed++;
-            }
-
-            // Rate limit for Nominatim API
-            await new Promise(resolve => setTimeout(resolve, 350));
-        }
-
-        loadingDiv.remove();
         updateGubernijLegend();
-
-        console.log(`Auto-loaded ${imported} points, ${failed} failed`);
+        console.log(`Loaded ${points.length} pre-geocoded points`);
 
     } catch (error) {
-        console.error('Error loading default CSV:', error);
+        console.error('Error loading data:', error);
     }
 }
 
-// Load default data after a short delay
-setTimeout(loadDefaultData, 500);
+// Load default data immediately
+loadDefaultData();

@@ -1,0 +1,458 @@
+[
+  {
+    "city": "Puponys",
+    "nameTag": "Puponių v.",
+    "gubernija": "Kauno",
+    "date": "1905-07-10",
+    "lat": 55.8065308,
+    "lon": 24.9392008
+  },
+  {
+    "city": "Maišiagala",
+    "nameTag": "Maišiagalos v.",
+    "gubernija": "Vilniaus",
+    "date": "1905-12-14",
+    "lat": 54.871362,
+    "lon": 25.0643171
+  },
+  {
+    "city": "Nociūnai",
+    "nameTag": "Nociūnų v.",
+    "gubernija": "Kauno",
+    "date": "1905-?-?",
+    "lat": 55.75006,
+    "lon": 25.0768
+  },
+  {
+    "city": "Endriejavas",
+    "nameTag": "Endriejavo v.",
+    "gubernija": "Kauno",
+    "date": "1905-?-?",
+    "lat": 55.6970834,
+    "lon": 21.7198929
+  },
+  {
+    "city": "Veiveriai ir Gudeliai",
+    "nameTag": "Veiverių ir Gudelių v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-03-?",
+    "lat": 54.7654416,
+    "lon": 23.7259097
+  },
+  {
+    "city": "Alsėdžiai",
+    "nameTag": "Alsėdžių v.",
+    "gubernija": "Kauno",
+    "date": "1905-03-28",
+    "lat": 56.0288687,
+    "lon": 22.048205
+  },
+  {
+    "city": "Paežeriai",
+    "nameTag": "Paežerių v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-04-02",
+    "lat": 54.6669705,
+    "lon": 23.1872038
+  },
+  {
+    "city": "Pajevonys",
+    "nameTag": "Pajevonių v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-03-20",
+    "lat": 54.5287474,
+    "lon": 22.8247369
+  },
+  {
+    "city": "Ylakiai",
+    "nameTag": "Ylakių v.",
+    "gubernija": "Kauno",
+    "date": "1905-04-06",
+    "lat": 56.2793939,
+    "lon": 21.8493892
+  },
+  {
+    "city": "Plungė",
+    "nameTag": "Plungės v.",
+    "gubernija": "Kauno",
+    "date": "1905-04-12",
+    "lat": 55.9139294,
+    "lon": 21.8533903
+  },
+  {
+    "city": "Dabravolė",
+    "nameTag": "Dabravolės v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-04-30",
+    "lat": 54.8646546,
+    "lon": 24.6567798
+  },
+  {
+    "city": "Garliava",
+    "nameTag": "Garliavos v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-03-?",
+    "lat": 54.8279294,
+    "lon": 23.8746799
+  },
+  {
+    "city": "Kriukai",
+    "nameTag": "Kriukų v.",
+    "gubernija": "Kauno",
+    "date": "1905-04-?",
+    "lat": 56.299099,
+    "lon": 23.8205471
+  },
+  {
+    "city": "Kruonis ir Jieznas",
+    "nameTag": "Kruonio ir Jiezno v.",
+    "gubernija": "Vilniaus",
+    "date": "1905-05-?",
+    "lat": 54.7576712,
+    "lon": 24.2385957
+  },
+  {
+    "city": "Sintautai",
+    "nameTag": "Sintautų v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-05-12",
+    "lat": 54.8786428,
+    "lon": 22.9929948
+  },
+  {
+    "city": "Mosėdis ir Gintališkės",
+    "nameTag": "Mosedžio ir Gintališkės v.",
+    "gubernija": "Kauno",
+    "date": "1905-? (iki 08)",
+    "lat": 56.16607,
+    "lon": 21.5753527
+  },
+  {
+    "city": "Pandėlis",
+    "nameTag": "Pandėlio v.",
+    "gubernija": "Kauno",
+    "date": "1905-? (iki 08)",
+    "lat": 56.0227453,
+    "lon": 25.2265171
+  },
+  {
+    "city": "Tauragė",
+    "nameTag": "Tauragės v.",
+    "gubernija": "Kauno",
+    "date": "1905-? (iki 08)",
+    "lat": 55.2533635,
+    "lon": 22.2903395
+  },
+  {
+    "city": "Kirsna",
+    "nameTag": "Kirsnos v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-? (iki 08)",
+    "lat": 54.3539737,
+    "lon": 23.3747922
+  },
+  {
+    "city": "Kvėdarna",
+    "nameTag": "Kvėdarna v.",
+    "gubernija": "Kauno",
+    "date": "1905-? (iki 08)",
+    "lat": 55.5576214,
+    "lon": 21.9998427
+  },
+  {
+    "city": "Žarėnai",
+    "nameTag": "Žarėnų v.",
+    "gubernija": "Kauno",
+    "date": "1905-? (iki 08)",
+    "lat": 56.1727783,
+    "lon": 23.0410648
+  },
+  {
+    "city": "Ūdrija",
+    "nameTag": "Ūdrijos v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-? (iki 08)",
+    "lat": 54.4372164,
+    "lon": 23.8774216
+  },
+  {
+    "city": "Krokialaukis",
+    "nameTag": "Krokialaukio v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-? (iki 08)",
+    "lat": 54.4362712,
+    "lon": 23.7627689
+  },
+  {
+    "city": "Bartninkai",
+    "nameTag": "Bartninkai v.",
+    "gubernija": "Suvalkų",
+    "date": "1905-03-29",
+    "lat": 54.5030915,
+    "lon": 23.0271762
+  },
+  {
+    "city": "Skapiškis",
+    "nameTag": "Skapiškio v.",
+    "gubernija": "Kauno",
+    "date": "1905-05-15",
+    "lat": 55.8940143,
+    "lon": 25.2013411
+  },
+  {
+    "city": "Kretinga",
+    "nameTag": "Kretingos v.",
+    "gubernija": "Kauno",
+    "date": "1905-06-?",
+    "lat": 55.8900579,
+    "lon": 21.2424112
+  },
+  {
+    "city": "Šimkaičiai",
+    "nameTag": "Šimkaičių v.",
+    "gubernija": "Kauno",
+    "date": "1905-06-18",
+    "lat": 55.4286815,
+    "lon": 23.3579585
+  },
+  {
+    "city": "Rietavas",
+    "nameTag": "Rietavo v.",
+    "gubernija": "Kauno",
+    "date": "1905-07-15",
+    "lat": 55.7229408,
+    "lon": 21.9270804
+  },
+  {
+    "city": "Anykščiai",
+    "nameTag": "Anykščių v.",
+    "gubernija": "Kauno",
+    "date": "1905-07-18",
+    "lat": 55.5257935,
+    "lon": 25.1061247
+  },
+  {
+    "city": "Akmenė",
+    "nameTag": "Akmenės v.",
+    "gubernija": "Kauno",
+    "date": "1905-?-?",
+    "lat": 56.2460515,
+    "lon": 22.7545972
+  },
+  {
+    "city": "Girsūdai",
+    "nameTag": "Girsūdų v.",
+    "gubernija": "Kauno",
+    "date": "1905-07-23",
+    "lat": 56.015303,
+    "lon": 24.4857439
+  },
+  {
+    "city": "Pumpėnai",
+    "nameTag": "Pumpėnų m.",
+    "gubernija": "Kauno",
+    "date": "1905-07-24",
+    "lat": 55.9358306,
+    "lon": 24.3375391
+  },
+  {
+    "city": "Krikliniai",
+    "nameTag": "Pumpėnų v.",
+    "gubernija": "Kauno",
+    "date": "1905-07-10",
+    "lat": 55.9136051,
+    "lon": 24.4517078
+  },
+  {
+    "city": "Krekenava",
+    "nameTag": "Krekenavos v.",
+    "gubernija": "Kauno",
+    "date": "1905-10-02",
+    "lat": 55.5426099,
+    "lon": 24.0974534
+  },
+  {
+    "city": "Krivuliai",
+    "nameTag": "Krekenavos v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-30",
+    "lat": 55.5563317,
+    "lon": 24.1431466
+  },
+  {
+    "city": "Vabalninkas",
+    "nameTag": "Vabalninko k.",
+    "gubernija": "Kauno",
+    "date": "1905-10-15",
+    "lat": 55.9800098,
+    "lon": 24.7467639
+  },
+  {
+    "city": "Jonava",
+    "nameTag": "Jonavos v.",
+    "gubernija": "Kauno",
+    "date": "1905-04-29",
+    "lat": 55.0737086,
+    "lon": 24.2756961
+  },
+  {
+    "city": "Joniškis",
+    "nameTag": "Joniškis v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-?",
+    "lat": 56.2412052,
+    "lon": 23.6151344
+  },
+  {
+    "city": "Čypėnai",
+    "nameTag": "Čypėnų v.",
+    "gubernija": "Kauno",
+    "date": "1905-03-28",
+    "lat": 55.9796651,
+    "lon": 24.8511667
+  },
+  {
+    "city": "Kupiškis",
+    "nameTag": "Kupiškio v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-11",
+    "lat": 55.8388909,
+    "lon": 24.9760431
+  },
+  {
+    "city": "Pašušvys",
+    "nameTag": "Pašušvio v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-19",
+    "lat": 55.405877,
+    "lon": 23.6302723
+  },
+  {
+    "city": "Veliuona",
+    "nameTag": "Veliuona v.",
+    "gubernija": "Kauno",
+    "date": "1905-?-?",
+    "lat": 55.078067,
+    "lon": 23.2737737
+  },
+  {
+    "city": "Paliepiai",
+    "nameTag": "Paliepių k.",
+    "gubernija": "Kauno",
+    "date": "1905-?-?",
+    "lat": 55.3814922,
+    "lon": 22.9505657
+  },
+  {
+    "city": "Pasvalys",
+    "nameTag": "Pasvalys v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-17",
+    "lat": 56.0622706,
+    "lon": 24.3965741
+  },
+  {
+    "city": "Švėkšna",
+    "nameTag": "Švėkšnos v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-18",
+    "lat": 55.5164935,
+    "lon": 21.6220951
+  },
+  {
+    "city": "Taujėnai",
+    "nameTag": "Taujėnų v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-?",
+    "lat": 55.389804,
+    "lon": 24.7612426
+  },
+  {
+    "city": "Šiluva",
+    "nameTag": "Šiluvos v.",
+    "gubernija": "Kauno",
+    "date": "1905-12-03",
+    "lat": 55.5304153,
+    "lon": 23.2225375
+  },
+  {
+    "city": "Kruopiai",
+    "nameTag": "Kruopių v.",
+    "gubernija": "Kauno",
+    "date": "1905-12-01",
+    "lat": 56.2416989,
+    "lon": 23.0134106
+  },
+  {
+    "city": "Vilkija",
+    "nameTag": "Vilkijos v.",
+    "gubernija": "Kauno",
+    "date": "1905-11-?",
+    "lat": 55.0397282,
+    "lon": 23.5829878
+  },
+  {
+    "city": "Gruzdžiai",
+    "nameTag": "Gruzdžių v.",
+    "gubernija": "Kauno",
+    "date": "1905-?(iki 08)",
+    "lat": 56.1007916,
+    "lon": 23.2549221
+  },
+  {
+    "city": "Krakės",
+    "nameTag": "Krakių v.",
+    "gubernija": "Kauno",
+    "date": "1905-12-?",
+    "lat": 55.4103875,
+    "lon": 23.7296698
+  },
+  {
+    "city": "Betygala",
+    "nameTag": "Betygalos v.",
+    "gubernija": "Kauno",
+    "date": "1905-12-?",
+    "lat": 55.3620812,
+    "lon": 23.3668782
+  },
+  {
+    "city": "Gelvonai",
+    "nameTag": "Gelvonų v.",
+    "gubernija": "Vilniaus",
+    "date": "1905-?(iki 08)",
+    "lat": 55.0666904,
+    "lon": 24.6922301
+  },
+  {
+    "city": "Virbališkiai",
+    "nameTag": "Virbališkių v.",
+    "gubernija": "Kauno",
+    "date": "1905-?(iki 08)",
+    "lat": 55.9387634,
+    "lon": 25.0538281
+  },
+  {
+    "city": "Žagarė",
+    "nameTag": "Žagarės v.",
+    "gubernija": "Kauno",
+    "date": "1905-?(iki 08)",
+    "lat": 56.3583616,
+    "lon": 23.2551181
+  },
+  {
+    "city": "Piniava",
+    "nameTag": "Piniavos v.",
+    "gubernija": "Kauno",
+    "date": "1905-05-03",
+    "lat": 55.7803865,
+    "lon": 24.3620288
+  },
+  {
+    "city": "Marijampolė",
+    "nameTag": "Suvalkų gub. Lietuviai",
+    "gubernija": "Suvalkų",
+    "date": "1905-?(iki 08)",
+    "lat": 54.5562536,
+    "lon": 23.3503665
+  }
+]
