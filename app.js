@@ -1555,6 +1555,9 @@ document.addEventListener('keydown', (e) => {
 // Load administrative boundaries on page load
 loadAdministrativeLayers();
 
+// Resize map on load since sidebar starts collapsed
+setTimeout(() => map.invalidateSize(), 100);
+
 // Auto-load pre-geocoded data from JSON (instant load, no geocoding needed)
 async function loadDefaultData() {
     try {
