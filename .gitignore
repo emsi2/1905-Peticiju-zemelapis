@@ -1,0 +1,14 @@
+# Editor lock files
+.~lock.*
+*.swp
+*~
+
+# Claude Code
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Spreadsheet source files (optional - remove if you want to include them)
+*.ods
