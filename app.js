@@ -1554,3 +1554,71 @@ document.addEventListener('keydown', (e) => {
 
 // Load administrative boundaries on page load
 loadAdministrativeLayers();
+
+// Auto-load default CSV data
+async function loadDefaultData() {
+    try {
+        const response = await fetch('peticijos_1905.csv');
+        if (!response.ok) return;
+
+        const csvText = await response.text();
+        const rows = csvText.trim().split('\n');
+
+        if (rows.length < 2) return;
+
+        // Parse header
+        const headers = rows[0].split(',').map(h => h.trim().toLowerCase());
+        const cityIdx = headers.findIndex(h => h.includes('vals') || h.includes('city'));
+        const gubernijaIdx = headers.findIndex(h => h.includes('gubern'));
+        const dateIdx = headers.findIndex(h => h.includes('data') || h.includes('date'));
+        const nameTagIdx = headers.findIndex(h => h.includes('name') || h.includes('tag'));
+
+        // Show loading
+        const loadingDiv = document.createElement('div');
+        loadingDiv.className = 'loading-overlay';
+        loadingDiv.innerHTML = 'Loading data points...';
+        document.body.appendChild(loadingDiv);
+
+        let imported = 0;
+        let failed = 0;
+
+        for (let i = 1; i < rows.length; i++) {
+            // Parse CSV row (handle quoted values)
+            const row = rows[i].match(/(".*?"|[^,]+)(?=\s*,|\s*$)/g);
+            if (!row || !row[cityIdx]) continue;
+
+            const city = row[cityIdx]?.replace(/"/g, '').trim();
+            const gubernija = gubernijaIdx !== -1 && row[gubernijaIdx] ? row[gubernijaIdx].replace(/"/g, '').trim() : null;
+            const date = dateIdx !== -1 && row[dateIdx] ? row[dateIdx].replace(/"/g, '').trim() : '';
+            const nameTag = nameTagIdx !== -1 && row[nameTagIdx] ? row[nameTagIdx].replace(/"/g, '').trim() : null;
+
+            if (!city) continue;
+
+            loadingDiv.innerHTML = `Loading: ${city} (${i}/${rows.length - 1})`;
+
+            const coords = await geocodeCity(city);
+
+            if (coords) {
+                addDataPoint(coords.lat, coords.lon, city, date, gubernija, nameTag);
+                imported++;
+            } else {
+                console.warn(`Could not geocode: ${city}`);
+                failed++;
+            }
+
+            // Rate limit
+            await new Promise(resolve => setTimeout(resolve, 300));
+        }
+
+        loadingDiv.remove();
+        updateGubernijLegend();
+
+        console.log(`Auto-loaded ${imported} points, ${failed} failed`);
+
+    } catch (error) {
+        console.log('No default CSV to load or error:', error.message);
+    }
+}
+
+// Load default data after a short delay
+setTimeout(loadDefaultData, 500);
